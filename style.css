@@ -2,7 +2,7 @@
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    font-family: "Song Myung", serif;
 }
 
 a {
@@ -359,6 +359,15 @@ footer {
     line-height: 1.7;
 }
 /* --- 통증치료 상세 페이지 스타일 --- */
+
+/*
+.container h2 {
+}
+
+.container p {
+}
+*/
+
 .treatment-detail-section {
     padding: 60px 0;
 }
@@ -418,10 +427,18 @@ footer {
 
 /* 지도를 감싸는 컨테이너 (반응형 대응) */
 .map-container {
-    width: 100%;
+    width: 55%;
     height: 400px; /* 지도의 높이 */
     border: 1px solid #ddd;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+}
+
+/* 화면 너비가 768px 이하일 때 (태블릿/모바일) 적용될 스타일 */
+@media (max-width: 768px) {
+    .map-container {
+        width: 85%; /* 화면이 작아지면 너비를 다시 100%로 변경 */
+        min-width: 0;  /* 최소 너비 제한 해제 */
+    }
 }
 
 .map-container iframe {
@@ -441,6 +458,7 @@ footer {
 
 .info-block {
     width: calc(50% - 20px); /* 2개의 블록이 나란히 */
+    margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {
